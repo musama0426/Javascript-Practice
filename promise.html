@@ -1,0 +1,51 @@
+<script>
+
+
+// promise have 2 parameters resolve and reject , resolve mean success and reject mean fail
+const probj1 = new Promise((resolve, reject)=>{
+    setTimeout(function() {
+      let roll_no = [1,2,3,4,5];
+      resolve(roll_no);
+      reject("roll no not showing");
+    }, 2000);
+  })
+  
+  
+  // promise with the help of funcion 
+  
+  const biodata = (data) =>{
+    
+    return new Promise ((resolve, reject)=>{
+     setTimeout( (data)=>{
+       
+       let biodata = {
+         
+         name: 'usama',
+         age : 29
+       }
+       
+       resolve(`my roll no is ${data} and my name is ${biodata.name} and my age is ${biodata.age}`);
+     }, 2000, data);
+      
+    });
+  }
+  
+  // when we use resolve  method , resolve have two methods then and catch
+  // .then mean we show the success message 
+  probj1.then((rollno)=>{
+    console.log(rollno);
+    
+    return biodata(rollno[2]);
+  }).then((result)=>{
+      console.log(result);
+  }).catch( (error)=>{
+    console.log(error);
+  }); 
+  
+  
+
+
+
+
+
+  </script>

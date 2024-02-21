@@ -1,0 +1,35 @@
+<script>
+const person = (friend, callfriend) => {
+  
+    console.log(`i'm busy will call you ${friend}`);
+    callfriend();
+
+
+}
+const person2 = () => {
+
+console.log(`okay you call me thanks`);
+}
+
+person("Usama", person2);
+
+
+
+
+// sum of two numbers store in variable wo variable ka result usi same sum of two sy multiply kr k show krna hai callback k through
+
+const func1 = (num1, num2, func2) =>{
+    let sum = num1 + num2;
+    let sumoftwo = func2(sum);
+    return sumoftwo;
+}
+
+const func2 = (sumoftwo) =>{
+    let result = sumoftwo * sumoftwo;
+    return result ;
+}
+
+let finalresult = func1(9,2, func2);
+
+console.log(`final result will be multiply by sum of 2 is  ${finalresult}`);
+</script>
