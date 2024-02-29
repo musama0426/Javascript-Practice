@@ -1,0 +1,54 @@
+<script>
+
+const arr = [5,1,3,2,6];
+
+// sum and max value with the help of reducer 
+
+// reducer  have two parameeters
+const output = arr.reduce(function(acc, curr){
+  
+  acc = acc + curr
+  return acc; 
+
+}, 0 );
+
+console.log(output);
+
+// max value find in reduce
+
+
+
+const ar = [5,1,3,2,6];
+
+const output2 = ar.reduce(function(max, curr){
+  if ( curr > max) {
+       max = curr ;
+  }
+ 
+  return max; 
+
+}, 0);
+
+console.log(`max number in this array is ${output2}`);
+
+
+
+
+
+// now find age and how many people have same age
+// we find one value that's why we use reduce method
+
+const outputAge = users.reduce(function(acc, curr){
+  
+  if (acc [curr.age]) {
+    acc [curr.age] = ++acc [curr.age];
+  }else{
+    acc[curr.age] = 1;
+  }
+  return acc;
+}, {});
+ 
+ 
+ console.log(outputAge);
+
+</script>

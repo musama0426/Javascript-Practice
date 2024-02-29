@@ -1,0 +1,28 @@
+<script>
+fetch("https://dummyjson.com/products")
+.then(async (apidata)=>{
+    let data = await apidata.json();
+    let products = data.products;
+    const value = products.filter((pricetag) => pricetag.price > 500 );
+    console.log(value);
+    // direct object add krna ho tu array mai 
+    value.map((insertVal) => insertVal["region"] = 'pakistan' );
+    // agr array mai variable k through krna ho tu
+    let res = value.map((insertVal) => {
+    insertVal["region"] = 'Pakistan';
+    return insertVal;
+});
+    console.log(value);
+    console.log('res', res);
+})
+.catch((error)=>{
+    console.log(error);
+})
+</script>
+
+<!-- <script>
+    fetch('https://dummyjson.com/products')
+    .then(res => res.json())
+    .then(json => console.log(json))
+    </script>
+     -->

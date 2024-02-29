@@ -1,0 +1,32 @@
+<script>
+
+
+
+const arrFind = ['Usama', 'Sam', 'Maan'];
+
+
+function findName(name){
+  return name == 'Sam';
+}
+const result =  arrFind.find(findName);
+
+console.log(result);
+
+
+
+const arrName = [
+  
+  { name : 'Usama' , age: "29" },
+  { name : 'Sam'   , age: "30" },
+  { name : 'Maan'  , age: "23" }
+  
+  ];
+  
+function findPerson(arrName){
+  return arrName.name == 'Sam';
+}
+
+const desireResult = arrName.find(findPerson).age;
+
+console.log(desireResult);
+</script>

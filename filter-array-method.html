@@ -1,0 +1,55 @@
+<script>
+const arr = [5,1,3,2,6];
+
+// odd value with the help of filter 
+
+function isOdd(x){
+  return x % 2;
+}
+
+const output = arr.filter(isOdd);
+
+console.log(output);
+
+// even value with the help of filter 
+
+const arry = [5,1,3,2,6];
+
+
+function isEven(x){
+  return x % 2 == 0;
+}
+
+const result = arr.filter(isEven);
+
+console.log(result);
+
+// greater than 4 with the help of filter 
+
+const ar = [5,1,3,2,6];
+
+
+const resultgreater = ar.filter((x) =>   x > 4 );
+
+console.log(resultgreater);
+
+
+const users = [
+    {firstname: "M" , lastName: "Usama", age: 23},
+    {firstname: "Mu" , lastName: "Ahsan", age: 32},
+    {firstname: "MI" , lastName: "Name", age: 36},
+    {firstname: "Maan" , lastName: "Usama", age: 23},
+  ];
+
+// list of firstname  to all users jin ki age 30 sy kam hai 
+
+const age_output = 
+
+users.filter( (x) => x.age < 30)
+.map((x) => x.firstname);
+
+console.log(age_output);
+
+
+
+</script>
